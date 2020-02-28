@@ -70,53 +70,126 @@
 
 # Solution 2
 
+# import random
+
+# print("Let/'s play Madlibs!")
+
+# print()
+
+# crush_name = input('Please enter 3 crush names, separated by commas: ')
+# verb_1 = input('Please enter 3 verbs, separated by commas: ')
+# favorite_room = input('Please enter 3 rooms in a house, separated by commas: ')
+# plural_noun_1  = input('Please enter 3 plural nouns, separated by commas: ')
+# body_part = input('Please enter 3 body parts, separated by commas: ')
+# piece_of_furniture = input('Please enter 3 pieces of furniture, separated by commas: ')
+# adjective_1 = input('Please enter 3 adjectives, separated by commas: ')
+# adverb_1 = input('Please enter 3 adverbs, separated by commas: ')
+# number_1 = input('Please enter 3 numbers, separated by commas: ')
+# plural_body_parts = input('Please enter 3 plural body parts, separated by commas: ')
+# musician = input('Please enter 3 musicians, seaprated by commas: ')
+# food = input('Please enter 3 foods, separated by commas: ')
+# brand_of_shoes = input('Please enter 3 types, or brands of shoes, separated by commas: ')
+# number_2 = input('Please enter 3 numbers, separated by commas: ')
+
+# crush = crush_name.split(", ")
+# verb = verb_1.split(", ")
+# room = favorite_room.split(", ")
+# plural = plural_noun_1.split(", ")
+# part = body_part.split(", ")
+# furniture = piece_of_furniture.split(", ")
+# adj_1 = adjective_1.split(", ")
+# adverb = adverb_1.split(", ")
+# num_1 = number_1.split(", ")
+# parts = plural_body_parts.split(", ")
+# music = musician.split(", ")
+# foods = food.split(", ")
+# shoes = brand_of_shoes.split(", ")
+# num_2 = number_2.split(", ")
+
+# print()
+
+# print(f"""You were suddenly feeling frisky so you asked {random.choice(crush)} if he wanted to {random.choice(verb)}
+# in the {random.choice(room)} with you. Normally, you use this room to store your vast collection 
+# of {random.choice(plural)}, but this time you felt like switching things up.
+
+# You just knew he was ready to go when he propped his {random.choice(part)} up on the {random.choice(furniture)} 
+# and gave you his {random.choice(adj_1)} bedroom eyes.
+
+# After {random.choice(adverb)} going at it for {random.choice(num_1)} minutes, you both climaxed at the exact same 
+# time. But then you looked deep into each other's {random.choice(parts)} 
+# and knew exactly what the other one wanted: one more round. You put on {random.choice(music)} 
+# greatest hits, lit a few {random.choice(foods)}-scented candles and knocked {random.choice(shoes)} 
+# for {random.choice(num_2)} more hours!""")
+
+
+# Solution 3
+
 import random
 
-print("Let/'s play Madlibs!")
 
-print()
+def madlib():
+    crush_name = input('Please enter 3 crush names, separated by commas: ')
+    verb_1 = input('Please enter 3 verbs, separated by commas: ')
+    favorite_room = input('Please enter 3 rooms in a house, separated by commas: ')
+    plural_noun_1  = input('Please enter 3 plural nouns, separated by commas: ')
+    body_part = input('Please enter 3 body parts, separated by commas: ')
+    piece_of_furniture = input('Please enter 3 pieces of furniture, separated by commas: ')
+    adjective_1 = input('Please enter 3 adjectives, separated by commas: ')
+    adverb_1 = input('Please enter 3 adverbs, separated by commas: ')
+    number_1 = input('Please enter 3 numbers, separated by commas: ')
+    plural_body_parts = input('Please enter 3 plural body parts, separated by commas: ')
+    musician = input('Please enter 3 musicians, seaprated by commas: ')
+    food = input('Please enter 3 foods, separated by commas: ')
+    brand_of_shoes = input('Please enter 3 types, or brands of shoes, separated by commas: ')
+    number_2 = input('Please enter 3 numbers, separated by commas: ')
 
-crush_name = input('Please enter 3 crush names, separated by commas: ')
-verb_1 = input('Please enter 3 verbs, separated by commas: ')
-favorite_room = input('Please enter 3 rooms in a house, separated by commas: ')
-plural_noun_1  = input('Please enter 3 plural nouns, separated by commas: ')
-body_part = input('Please enter 3 body parts, separated by commas: ')
-piece_of_furniture = input('Please enter 3 pieces of furniture, separated by commas: ')
-adjective_1 = input('Please enter 3 adjectives, separated by commas: ')
-adverb_1 = input('Please enter 3 adverbs, separated by commas: ')
-number_1 = input('Please enter 3 numbers, separated by commas: ')
-plural_body_parts = input('Please enter 3 plural body parts, separated by commas: ')
-musician = input('Please enter 3 musicians, seaprated by commas: ')
-food = input('Please enter 3 foods, separated by commas: ')
-brand_of_shoes = input('Please enter 3 types, or brands of shoes, separated by commas: ')
-number_2 = input('Please enter 3 numbers, separated by commas: ')
+    crush = crush_name.split(", ")
+    verb = verb_1.split(", ")
+    room = favorite_room.split(", ")
+    plural = plural_noun_1.split(", ")
+    part = body_part.split(", ")
+    furniture = piece_of_furniture.split(", ")
+    adj_1 = adjective_1.split(", ")
+    adverb = adverb_1.split(", ")
+    num_1 = number_1.split(", ")
+    parts = plural_body_parts.split(", ")
+    music = musician.split(", ")
+    foods = food.split(", ")
+    shoes = brand_of_shoes.split(", ")
+    num_2 = number_2.split(", ")
 
-crush = crush_name.split(", ")
-verb = verb_1.split(", ")
-room = favorite_room.split(", ")
-plural = plural_noun_1.split(", ")
-part = body_part.split(", ")
-furniture = piece_of_furniture.split(", ")
-adj_1 = adjective_1.split(", ")
-adverb = adverb_1.split(", ")
-num_1 = number_1.split(", ")
-parts = plural_body_parts.split(", ")
-music = musician.split(", ")
-foods = food.split(", ")
-shoes = brand_of_shoes.split(", ")
-num_2 = number_2.split(", ")
+    print()
+    
+    a = True
+   
+    while a:
+        permission = input('Would you like to read your Madlib?')
+        if permission == 'yes':
+            print(f"""You were suddenly feeling frisky so you asked {random.choice(crush)} if he wanted to {random.choice(verb)}
+            in the {random.choice(room)} with you. Normally, you use this room to store your vast collection 
+            of {random.choice(plural)}, but this time you felt like switching things up.
 
-print()
+            You just knew he was ready to go when he propped his {random.choice(part)} up on the {random.choice(furniture)} 
+            and gave you his {random.choice(adj_1)} bedroom eyes.
 
-print(f"""You were suddenly feeling frisky so you asked {random.choice(crush)} if he wanted to {random.choice(verb)}
-in the {random.choice(room)} with you. Normally, you use this room to store your vast collection 
-of {random.choice(plural)}, but this time you felt like switching things up.
+            After {random.choice(adverb)} going at it for {random.choice(num_1)} minutes, you both climaxed at the exact same 
+            time. But then you looked deep into each other's {random.choice(parts)} 
+            and knew exactly what the other one wanted: one more round. You put on {random.choice(music)} 
+            greatest hits, lit a few {random.choice(foods)}-scented candles and knocked {random.choice(shoes)} 
+            for {random.choice(num_2)} more hours!""")
+        else:
+            a = False
+            print('Goodbye')
+            
 
-You just knew he was ready to go when he propped his {random.choice(part)} up on the {random.choice(furniture)} 
-and gave you his {random.choice(adj_1)} bedroom eyes.
+x = True
 
-After {random.choice(adverb)} going at it for {random.choice(num_1)} minutes, you both climaxed at the exact same 
-time. But then you looked deep into each other's {random.choice(parts)} 
-and knew exactly what the other one wanted: one more round. You put on {random.choice(music)} 
-greatest hits, lit a few {random.choice(foods)}-scented candles and knocked {random.choice(shoes)} 
-for {random.choice(num_2)} more hours!""")
+while x: 
+    response = input("Do you want to play Madlibs?")
+    if response == 'yes':
+        madlib()
+    #elif response != 'yes':
+    else: 
+        x = False
+        print('Goodbye')
+    
