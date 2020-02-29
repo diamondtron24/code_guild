@@ -188,7 +188,6 @@ while x:
     response = input("Do you want to play Madlibs?")
     if response == 'yes':
         madlib()
-    #elif response != 'yes':
     else: 
         x = False
         print('Goodbye')
