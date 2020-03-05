@@ -74,15 +74,6 @@ import random
 import string
 
 
-# character = string.ascii_letters + string.digits + string.punctuation
-
-# def code_length():
-#     pass_lower = int(input('How many lower case characters do you want your password to be (1-20):  '))
-#     pass_upper = int(input('How many upper case characters do you want your password to be (1-20):  '))
-#     pass_number = int(input('How many number characters do you want your password to be (1-20):  '))
-#     pass_special = int(input('How many special characters do you want your password to be (1-20):  '))   
-#     return pass_lower, pass_upper, pass_number, pass_special
-
 def lower_generator(pass_lower):
     x = 0
     lower = ''
