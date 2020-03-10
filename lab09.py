@@ -77,31 +77,37 @@
 
 
 # Version 4
-import math
-unit = {
-    "ft": 0.3048,
-    "mi": 1609.34,
-    "m": 1,
-    "km": 1000,
-    "yd": 0.9144,
-    "in": 0.0254,
-}
 
 
-def convert(end_measuring_system, conversion):
-    start_measuring_system = input("What is the beginning measurment type? Please enter ft, mi, m, km, yd, in: ")
-    end_measuring_system = (input("What is the ending measurment type? Please enter ft, mi, m, km, yd, in: "))
-    distance = int(input(f'Please enter the distance in {start_measuring_system} that you would like to convert: '))
+def convert_to_meters(unit, start_measuring_system, distance):
     conversion = unit[start_measuring_system] * distance
     return conversion
     
 
+def meters_to_end_system(unit, end_measuring_system, converted):
+    answer = converted / unit[end_measuring_system]
+    return answer
+    
 
-def anwers(start_measuring_system, end_measuring_system, distance, conversion):
-    answer = conversion / unit[end_measuring_system]
-    print(f'{distance} {start_measuring_system} equals {math.ceil(answer)} {end_measuring_system}')
+
+def main():
+    unit = {
+        "ft": 0.3048,
+        "mi": 1609.34,
+        "m": 1,
+        "km": 1000,
+        "yd": 0.9144,
+        "in": 0.0254,
+    }
 
 
-def main(end_measuring_system, conversion):
-    convert(end_measuring_system, conversion)   
-    answers()
+    start_measuring_system = input("What is the beginning measurment type? Please enter ft, mi, m, km, yd, in: ")
+    end_measuring_system = (input("What is the ending measurment type? Please enter ft, mi, m, km, yd, in: "))
+    distance = int(input(f'Please enter the distance in {start_measuring_system} that you would like to convert: '))
+
+    converted = convert_to_meters(unit, start_measuring_system, distance)
+    answer_1 = meters_to_end_system(unit, end_measuring_system, converted)
+    print(answer_1)
+ 
+
+main()
